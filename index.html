@@ -2,13 +2,14 @@
 <html>
 
 <head>
-    <title>Moving Sale</title>
+    <title>Gemma & Del are moving</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div class="header">
-        <h1>House clear out</h1>
+        <h1>CLEAR OUT</h1>
     </div>
 
     <div class="intro-card">
@@ -26,47 +27,112 @@
     </div>
 
     <div class="donate-button-container">
-        <a href="https://www.paypal.com" target="_blank" class="donate-btn">Donate via PayPal</a>
+        <a href="https://paypal.me/GemmaLewington" target="_blank" class="donate-btn">Donate via PayPal</a>
     </div>
 
-    <nav class="navbar">
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#clothes">Clothes</a></li>
-            <li><a href="#furniture">Furniture</a></li>
-            <li><a href="#kitchenware">Kitchenware</a></li>
-            <li><a href="#everythingelse">Everything else</a></li>
-        </ul>
-    </nav>
+    <div class="filter-bar">
+        <label>
+            <input id="all" type="checkbox" value="all">
+            <span>View all</span>
+        </label>
+        <label>
+            <input id="clothes" type="checkbox" value="clothes">
+            <span>Clothes</span>
+        </label>
+        <label>
+            <input id="furniture" type="checkbox" value="furniture">
+            <span>Furniture</span>
+        </label>
+        <label>
+            <input id="kitchenware" type="checkbox" value="kitchenware">
+            <span>Kitchenware</span>
+        </label>
+        <label>
+            <input id="plants" type="checkbox" value="plants">
+            <span>Plants</span>
+        </label>
+        <label>
+            <input id="everythingelse" type="checkbox" value="everythingelse">
+            <span>Everything else</span>
+        </label>
+    </div>
 
 
     <div class="items-container">
-        <!-- Sample Item 1 -->
-        <div class="item-card">
+        <!-- Clothes -->
+        <div class="item-card" data-category="clothes">
             <img src="photo-files/angry-cloud.jpg" alt="Angry cloud">
-            <h2>Vintage Chair</h2>
-            <p><strong>Description:</strong> Wooden chair from 1970s.</p>
-            <p><strong>Measurements:</strong> L: , W: , H: </p>
-            <p><strong>Condition:</strong> Good</p>
+            <h2>Lucy & Yak boiler suit</h2>
+            <p><strong>Description: </strong>Lucy & Yak black boilersuit, made from a soft corduroy fabric.</p>
+            <p><strong>Size: </strong>Small.</p>
+            <p><strong>Condition: </strong>Very good.</p>
             <button class="reserve-btn">Reserve</button>
         </div>
 
-        <!-- Sample Item 2 -->
-        <div class="item-card">
+        <div class="item-card" data-category="clothes">
+            <img src="photo-files/angry-cloud.jpg" alt="Angry cloud">
+            <h2>Dr Martens vegan boots</h2>
+            <p><strong>Description: </strong>Dr Martens vegan boots, black fake leather.</p>
+            <p><strong>Size: </strong>UK5/EU38.</p>
+            <p><strong>Condition: </strong>Very good.</p>
+            <button class="reserve-btn">Reserve</button>
+        </div>
+
+        <!-- Furniture -->
+        <div class="item-card" data-category="furniture">
             <img src="photo-files/face-cloud.jpg" alt="Face cloud">
-            <h2>Desk Lamp</h2>
-            <p><strong>Description:</strong> Adjustable desk lamp.</p>
-            <p><strong>Measurements:</strong> L: , W: , H: </p>
-            <p><strong>Condition:</strong> Good</p>
+            <h2>Metal bed frame</h2>
+            <p><strong>Description: </strong>Metal bed frame.</p>
+            <p><strong>Measurements: </strong> L: , W: , H: </p>
+            <p><strong>Condition: </strong> Good</p>
             <button class="reserve-btn">Reserve</button>
         </div>
 
-        <!-- Sample Item 3 -->
-        <div class="item-card">
+        <div class="item-card" data-category="furniture">
+            <img src="photo-files/face-cloud.jpg" alt="Face cloud">
+            <h2>Metal bed frame</h2>
+            <p><strong>Description: </strong>Metal bed frame.</p>
+            <p><strong>Measurements: </strong> L: , W: , H: </p>
+            <p><strong>Condition: </strong> Good</p>
+            <button class="reserve-btn">Reserve</button>
+        </div>
+
+        <div class="item-card" data-category="furniture">
+            <img src="photo-files/face-cloud.jpg" alt="Face cloud">
+            <h2>Metal bed frame</h2>
+            <p><strong>Description: </strong>Metal bed frame.</p>
+            <p><strong>Measurements: </strong> L: , W: , H: </p>
+            <p><strong>Condition: </strong> Good</p>
+            <button class="reserve-btn">Reserve</button>
+        </div>
+
+        <!-- Kitchenware -->
+        <div class="item-card" data-category="kitchenware">
             <img src="photo-files/ice-cream-cloud.jpg" alt="Ice cream cloud">
             <h2>Coffee Table</h2>
-            <p><strong>Description:</strong> Small glass coffee table.</p>
-            <p><strong>Measurements:</strong> L: , W: , H: </p>
-            <p><strong>Condition:</strong> Good</p>
+            <p><strong>Description: </strong>Small glass coffee table.</p>
+            <p><strong>Measurements: </strong>L: , W: , H: </p>
+            <p><strong>Condition: </strong>Good</p>
+            <button class="reserve-btn">Reserve</button>
+        </div>
+
+        <!-- Plants -->
+        <div class="item-card" data-category="plants">
+            <img src="photo-files/ice-cream-cloud.jpg" alt="Ice cream cloud">
+            <h2>Fake plants</h2>
+            <p><strong>Description: </strong>Small glass coffee table.</p>
+            <p><strong>Measurements: </strong>L: , W: , H: </p>
+            <p><strong>Condition: </strong>Good</p>
+            <button class="reserve-btn">Reserve</button>
+        </div>
+
+        <!-- Everything else -->
+        <div class="item-card" data-category="everythingelse">
+            <img src="photo-files/ice-cream-cloud.jpg" alt="Ice cream cloud">
+            <h2>Coffee Table</h2>
+            <p><strong>Description: </strong>Small glass coffee table.</p>
+            <p><strong>Measurements: </strong>L: , W: , H: </p>
+            <p><strong>Condition: </strong>Good</p>
             <button class="reserve-btn">Reserve</button>
         </div>
     </div>

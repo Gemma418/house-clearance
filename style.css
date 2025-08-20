@@ -8,6 +8,10 @@
 #323036 - jet - text
 */
 
+.hidden {
+    display: none !important;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -31,7 +35,7 @@ p {
     margin: 0 auto 20px auto;
     padding: 5px;
     border-radius: 4px;
-    background: linear-gradient(20deg, #C299A1, #FFB4A2);
+    background: #CBC9CF;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
@@ -58,31 +62,52 @@ p {
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.2s, transform 0.2s;
 }
 
-.navbar {
+.filter-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #CBC9CF;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 10px 20px;
     margin: 0 0 20px 0;
-    border-radius: 8px;
+    background: none;
     color: #323036;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 15px;
+.filter-bar label {
+    cursor: pointer;
+    margin: 0.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    user-select: none;
+    display: inline-block;
+    /* remove label background */
+    background: none;
+    padding: 0;
+    color: white;
 }
 
-.nav-links li a {
+
+/* Hide the real checkboxes */
+
+.filter-bar input[type="checkbox"] {
+    display: none;
+}
+
+.filter-bar label span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+
+/* Checked state */
+
+.filter-bar input[type="checkbox"]:checked+span {
+    background: linear-gradient(20deg, #C299A1, #FFB4A2);
     color: #323036;
-    text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 4px;
+    border: 2px solid #323036;
 }
 
 .items-container {
