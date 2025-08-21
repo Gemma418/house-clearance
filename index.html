@@ -4,30 +4,40 @@
 <head>
     <title>Gemma & Del are moving</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="header">
         <h1>CLEAR OUT</h1>
     </div>
-
     <div class="intro-card">
         <p>
-            We’re moving soon and need to clear out <strong>a LOT</strong> of stuff! 🎉 Come by, raid the house, and give our things a happy new home.
+            We’re moving soon and have <strong>tons of stuff</strong> that needs a new home! 🎉<br> Swing by - click the button to book a visit - and give our things a happy new life.
         </p>
-
         <p>
-            👉 <em>[Placeholder for a calendar invite link so you know when to swing by]</em>
-        </p>
-
-        <p>
-            If you score some goodies and want to show us some love, we’d be super grateful for a donation if you are able.
+            If you find something you love, a donation (via the PayPal button below) would be greatly appreciated — but only if you’re able. ❤️
         </p>
     </div>
 
-    <div class="donate-button-container">
-        <a href="https://paypal.me/GemmaLewington" target="_blank" class="donate-btn">Donate via PayPal</a>
+    <div class="line-divider">
+    </div>
+
+    <div class="buttons">
+        <div class="visit-button-container">
+            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+            <div id="visit-button"></div>
+        </div>
+
+        <div class="donate-button-container">
+            <a href="https://paypal.me/GemmaLewington" target="_blank" class="donate-button-link">Donate via PayPal</a>
+        </div>
+    </div>
+
+    <div class="line-divider">
     </div>
 
     <div class="filter-bar">
@@ -52,8 +62,8 @@
             <span>Plants</span>
         </label>
         <label>
-            <input id="everythingelse" type="checkbox" value="everythingelse">
-            <span>Everything else</span>
+            <input id="misc" type="checkbox" value="misc">
+            <span>Misc.</span>
         </label>
     </div>
 
@@ -127,7 +137,7 @@
         </div>
 
         <!-- Everything else -->
-        <div class="item-card" data-category="everythingelse">
+        <div class="item-card" data-category="misc">
             <img src="photo-files/ice-cream-cloud.jpg" alt="Ice cream cloud">
             <h2>Coffee Table</h2>
             <p><strong>Description: </strong>Small glass coffee table.</p>
@@ -138,6 +148,8 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="calendar-button.js" defer></script>
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" defer></script>
 </body>
 
 </html>
