@@ -13,31 +13,38 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: Montserrat, Arial, sans-serif;
     background-color: #6D6875;
 }
 
-h1 {
-    margin-bottom: 15px;
-    color: #323036;
-    font-size: 2.5rem;
+.header {
     text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    background: #CBC9CF;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+h1 {
+    color: #323036;
+    font-size: 1.8rem;
+    margin: 5px;
 }
 
 p {
     color: #323036;
 }
 
-.intro-card,
-.header {
-    width: 100%;
-    margin: 0 auto 20px auto;
+.intro-card {
+    margin: 5px 0;
     padding: 5px;
-    border-radius: 4px;
+    border-radius: 8px;
     background: #CBC9CF;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
     text-align: center;
+    font-size: 1rem;
 }
 
 .intro-card p {
@@ -46,28 +53,49 @@ p {
     margin-bottom: 15px;
 }
 
-.donate-button-container {
-    text-align: center;
-    /* center the button */
-    margin: 20px 0;
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
-.donate-btn {
+.visit-button-container,
+.donate-button-container {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.donate-button-link,
+.visit-button-container button {
+    min-height: fit-content;
     display: inline-block;
-    padding: 12px 24px;
     background-color: #FFCDB2;
-    color: #323036;
-    font-size: 1.5rem;
-    font-weight: bold;
+    padding: 4px 8px;
+    color: #323036 !important;
+    font-size: 1.2rem;
+    font-weight: bold !important;
+    line-height: 26px !important;
+    letter-spacing: .25px !important;
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+.line-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #CBC9CF;
+    margin: 10px 0;
 }
 
 .filter-bar {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 10px 20px;
     margin: 0 0 20px 0;
     background: none;
@@ -81,7 +109,6 @@ p {
     font-size: 1rem;
     user-select: none;
     display: inline-block;
-    /* remove label background */
     background: none;
     padding: 0;
     color: white;
@@ -114,14 +141,12 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-evenly
+    justify-content: space-evenly;
 }
 
 .item-card {
-    flex: 1 1 300px;
-    /* grow, shrink, base width 300px */
-    max-width: 300px;
-    /* don't get wider than 300px */
+    flex: 1 1 100%;
+    max-width: 100%;
     min-width: 150px;
     border: 1px solid #7B656F;
     border-radius: 12px;
@@ -169,51 +194,68 @@ p {
 }
 
 
-/* Mobile adjustments */
+/* Navigation styles for mobile */
 
-@media (max-width: 600px) {
+.nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #ff6600;
+    gap: 0;
+    display: none;
+}
+
+.nav-links li {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.nav-toggle {
+    display: block;
+}
+
+.booking-card {
+    margin-top: 15px;
+}
+
+
+/* Desktop styles */
+
+@media (min-width: 701px) {
     h1 {
-        font-size: 1.8rem;
-        /* shrink heading */
+        font-size: 5rem;
     }
     .intro-card {
-        padding: 15px;
-        font-size: 1rem;
-        /* smaller text */
+        padding: 5px;
     }
-}
-
-@media (max-width: 600px) {
+    .intro-card p {
+        font-size: 1.4rem;
+    }
+    .donate-button-link,
+    .visit-button-container button {
+        font-size: 1.75rem;
+    }
+    .item-card {
+        flex: 1 1 300px;
+        max-width: 300px;
+    }
     .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background-color: #ff6600;
-        gap: 0;
-        display: none;
-        /* hidden by default */
-    }
-    .nav-links li {
-        text-align: center;
-        padding: 10px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .nav-links.show {
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 20px;
         display: flex;
     }
-    .nav-toggle {
-        display: block;
-    }
-}
-
-
-/* On small screens, make cards full width */
-
-@media (max-width: 600px) {
-    .item-card {
-        flex: 1 1 100%;
-        max-width: 100%;
+    .nav-links li {
+        text-align: left;
+        padding: 0;
+        border-top: none;
     }
 }
