@@ -29,12 +29,17 @@ body {
 
 h1 {
     color: #323036;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 5px;
 }
 
+
+/* Intro card */
+
 p {
     color: #323036;
+    padding: 0;
+    margin: 0;
 }
 
 .intro-card {
@@ -44,32 +49,23 @@ p {
     background: #CBC9CF;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
     text-align: center;
-    font-size: 1rem;
 }
 
 .intro-card p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.4;
     margin-bottom: 15px;
 }
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-}
 
-.visit-button-container,
+/* Donate button */
+
 .donate-button-container {
     flex: 0 0 auto;
     text-align: center;
 }
 
-.donate-button-link,
-.visit-button-container button {
+.donate-button-link {
     min-height: fit-content;
     display: inline-block;
     background-color: #FFCDB2;
@@ -92,6 +88,9 @@ p {
     margin: 10px 0;
 }
 
+
+/* Filters */
+
 .filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -106,7 +105,7 @@ p {
     cursor: pointer;
     margin: 0.2rem;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     user-select: none;
     display: inline-block;
     background: none;
@@ -137,20 +136,22 @@ p {
     border: 2px solid #323036;
 }
 
+
+/* Items */
+
 .items-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     justify-content: space-evenly;
 }
 
 .item-card {
-    flex: 1 1 100%;
+    flex: 1 1 30%;
     max-width: 100%;
-    min-width: 150px;
     border: 1px solid #7B656F;
     border-radius: 12px;
-    padding: 15px;
+    padding: 12px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -163,7 +164,6 @@ p {
     max-height: 300px;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
 }
@@ -172,20 +172,34 @@ p {
     margin: 10px 0 5px;
     color: #323036;
     text-align: center;
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
 }
 
 .item-card p {
-    margin: 5px 0;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .reserve-btn {
-    margin-top: 10px;
+    margin: auto 8px;
     padding: 8px 12px;
     background-color: #FFCDB2;
     color: #323036;
     border: none;
     border-radius: 18px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .reserve-btn:disabled {
@@ -194,70 +208,54 @@ p {
 }
 
 
-/* Navigation styles for mobile */
-
-.nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background-color: #ff6600;
-    gap: 0;
-    display: none;
-}
-
-.nav-links li {
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.nav-links.show {
-    display: flex;
-}
-
-.nav-toggle {
-    display: block;
-}
-
-.booking-card {
-    margin-top: 15px;
-}
-
-
 /* Desktop styles */
 
 @media (min-width: 701px) {
+    .header {
+        margin-bottom: 10px;
+    }
     h1 {
+        color: #323036;
         font-size: 5rem;
     }
+    /* Intro card */
     .intro-card {
-        padding: 5px;
+        margin: 20px 0;
     }
     .intro-card p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        line-height: 1.6;
     }
-    .donate-button-link,
-    .visit-button-container button {
-        font-size: 1.75rem;
-        padding: 8px 16px;
-        line-height: 40px !important;
+    /* Donate button */
+    .donate-button-link {
+        padding: 12px 20px;
+        font-size: 1.5rem;
+    }
+    .line-divider {
+        margin: 20px 0;
+    }
+    /* Filters */
+    .filter-bar label {
+        font-size: 1rem;
+    }
+    /* Items */
+    .items-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-evenly;
     }
     .item-card {
-        flex: 1 1 300px;
         max-width: 300px;
     }
-    .nav-links {
-        position: static;
-        flex-direction: row;
-        background-color: transparent;
-        gap: 20px;
-        display: flex;
+    .item-card h2 {
+        margin: 15px 0 10px;
+        font-size: 1.5rem;
     }
-    .nav-links li {
-        text-align: left;
-        padding: 0;
-        border-top: none;
+    .item-details {
+        margin-bottom: 15px;
+    }
+    .item-card p {
+        font-size: 1rem;
     }
 }

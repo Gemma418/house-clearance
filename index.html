@@ -1,155 +1,16 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>Gemma & Del are moving</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg" href="/home.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clearing out</title>
 </head>
 
 <body>
-    <div class="header">
-        <h1>CLEAR OUT</h1>
-    </div>
-    <div class="intro-card">
-        <p>
-            We’re moving soon and have <strong>tons of stuff</strong> that needs a new home! 🎉<br> Swing by - click the button to book a visit - and give our things a happy new life.
-        </p>
-        <p>
-            If you find something you love, a donation (via the PayPal button below) would be greatly appreciated — but only if you’re able. ❤️
-        </p>
-    </div>
-
-    <div class="line-divider">
-    </div>
-
-    <div class="buttons">
-        <div class="visit-button-container">
-            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-            <div id="visit-button"></div>
-        </div>
-
-        <div class="donate-button-container">
-            <a href="https://paypal.me/GemmaLewington" target="_blank" class="donate-button-link">Donate via PayPal</a>
-        </div>
-    </div>
-
-    <div class="line-divider">
-    </div>
-
-    <div class="filter-bar">
-        <label>
-            <input id="all" type="checkbox" value="all">
-            <span>View all</span>
-        </label>
-        <label>
-            <input id="clothes" type="checkbox" value="clothes">
-            <span>Clothes</span>
-        </label>
-        <label>
-            <input id="furniture" type="checkbox" value="furniture">
-            <span>Furniture</span>
-        </label>
-        <label>
-            <input id="kitchenware" type="checkbox" value="kitchenware">
-            <span>Kitchenware</span>
-        </label>
-        <label>
-            <input id="plants" type="checkbox" value="plants">
-            <span>Plants</span>
-        </label>
-        <label>
-            <input id="misc" type="checkbox" value="misc">
-            <span>Misc.</span>
-        </label>
-    </div>
-
-
-    <div class="items-container">
-        <!-- Clothes -->
-        <div class="item-card" data-category="clothes">
-            <img src="photo-files/angry-cloud.jpg" alt="Angry cloud">
-            <h2>Lucy & Yak boiler suit</h2>
-            <p><strong>Description: </strong>Lucy & Yak black boilersuit, made from a soft corduroy fabric.</p>
-            <p><strong>Size: </strong>Small.</p>
-            <p><strong>Condition: </strong>Very good.</p>
-            <button class="reserve-btn">Reserve</button>
-        </div>
-
-        <div class="item-card" data-category="clothes">
-            <img src="photo-files/angry-cloud.jpg" alt="Angry cloud">
-            <h2>Dr Martens vegan boots</h2>
-            <p><strong>Description: </strong>Dr Martens vegan boots, black fake leather.</p>
-            <p><strong>Size: </strong>UK5/EU38.</p>
-            <p><strong>Condition: </strong>Very good.</p>
-            <button class="reserve-btn">Reserve</button>
-        </div>
-
-        <!-- Furniture -->
-        <div class="item-card" data-category="furniture">
-            <img src="photo-files/face-cloud.jpg" alt="Face cloud">
-            <h2>Metal bed frame</h2>
-            <p><strong>Description: </strong>Metal bed frame.</p>
-            <p><strong>Measurements: </strong> L: , W: , H: </p>
-            <p><strong>Condition: </strong> Good</p>
-            <button class="reserve-btn">Reserve</button>
-        </div>
-
-        <div class="item-card" data-category="furniture">
-            <img src="photo-files/face-cloud.jpg" alt="Face cloud">
-            <h2>Metal bed frame</h2>
-            <p><strong>Description: </strong>Metal bed frame.</p>
-            <p><strong>Measurements: </strong> L: , W: , H: </p>
-            <p><strong>Condition: </strong> Good</p>
-            <button class="reserve-btn">Reserve</button>
-        </div>
-
-        <div class="item-card" data-category="furniture">
-            <img src="photo-files/face-cloud.jpg" alt="Face cloud">
-            <h2>Metal bed frame</h2>
-            <p><strong>Description: </strong>Metal bed frame.</p>
-            <p><strong>Measurements: </strong> L: , W: , H: </p>
-            <p><strong>Condition: </strong> Good</p>
-            <button class="reserve-btn">Reserve</button>
-        </div>
-
-        <!-- Kitchenware -->
-        <div class="item-card" data-category="kitchenware">
-            <img src="photo-files/ice-cream-cloud.jpg" alt="Ice cream cloud">
-            <h2>Coffee Table</h2>
-            <p><strong>Description: </strong>Small glass coffee table.</p>
-            <p><strong>Measurements: </strong>L: , W: , H: </p>
-            <p><strong>Condition: </strong>Good</p>
-            <button class="reserve-btn">Reserve</button>
-        </div>
-
-        <!-- Plants -->
-        <div class="item-card" data-category="plants">
-            <img src="photo-files/ice-cream-cloud.jpg" alt="Ice cream cloud">
-            <h2>Fake plants</h2>
-            <p><strong>Description: </strong>Small glass coffee table.</p>
-            <p><strong>Measurements: </strong>L: , W: , H: </p>
-            <p><strong>Condition: </strong>Good</p>
-            <button class="reserve-btn">Reserve</button>
-        </div>
-
-        <!-- Everything else -->
-        <div class="item-card" data-category="misc">
-            <img src="photo-files/ice-cream-cloud.jpg" alt="Ice cream cloud">
-            <h2>Coffee Table</h2>
-            <p><strong>Description: </strong>Small glass coffee table.</p>
-            <p><strong>Measurements: </strong>L: , W: , H: </p>
-            <p><strong>Condition: </strong>Good</p>
-            <button class="reserve-btn">Reserve</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-    <script src="calendar-button.js" defer></script>
-    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" defer></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
