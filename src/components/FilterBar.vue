@@ -5,10 +5,6 @@
             <span>View all</span>
         </label>
         <label>
-            <input id="clothes" type="checkbox" value="clothes">
-            <span>Clothes</span>
-        </label>
-        <label>
             <input id="furniture" type="checkbox" value="furniture">
             <span>Furniture</span>
         </label>
