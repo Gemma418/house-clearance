@@ -25,10 +25,13 @@ h1 {
     margin: 5px;
 }
 
-p {
+p,
+li {
     color: #323036;
     padding: 0;
     margin: 0;
+    font-size: 1rem;    
+    line-height: 1.4rem;
 }
 
 
@@ -46,6 +49,7 @@ p {
 /* Home page */
 .intro-card,
 .view-items-container,
+.donate-button-container p,
 .open-event-container,
 .notes {
     margin: 10px 5px;
@@ -54,12 +58,6 @@ p {
     background: #CBC9CF;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
     text-align: justify;
-}
-
-.intro-card p {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 5px;
 }
 
 /* Buttons/links */
@@ -76,6 +74,7 @@ p {
     display: inline-block;
     background-color: #FFCDB2;
     padding: 4px 8px;
+    margin: 4px 8px;
     color: #323036 !important;
     font-size: 1.2rem;
     font-weight: bold !important;
@@ -206,10 +205,20 @@ p {
     }
 
     /* Home page */
-    .intro-card {
-        margin: 20px 0;
+    .intro-card,
+    .view-items-container,
+    .donate-button-container p,
+    .open-event-container,
+    .notes {
+        margin: 20px 100px;
+        padding: 5px;
     }
-    .intro-card p {
+    .intro-card p,
+    .view-items-container p,
+    .donate-button-container p,
+    .open-event-container p,
+    .open-event-container li,
+    .notes p {
         font-size: 1.2rem;
         line-height: 1.6;
     }
