@@ -8,6 +8,8 @@
 #323036 - jet
 */
 
+/* Global */
+
 .hidden {
     display: none !important;
 }
@@ -17,24 +19,11 @@ body {
     background-color: #6D6875;
 }
 
-.header {
-    text-align: center;
-    padding: 5px;
-    border-radius: 8px;
-    background: #CBC9CF;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
 h1 {
     color: #323036;
     font-size: 2rem;
     margin: 5px;
 }
-
-
-/* Intro card */
 
 p {
     color: #323036;
@@ -42,29 +31,47 @@ p {
     margin: 0;
 }
 
-.intro-card {
-    margin: 5px 0;
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #CBC9CF;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Home page */
+.intro-card,
+.view-items-container,
+.open-event-container,
+.notes {
+    margin: 10px 5px;
     padding: 5px;
     border-radius: 8px;
     background: #CBC9CF;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
-    text-align: center;
+    text-align: justify;
 }
 
 .intro-card p {
     font-size: 1rem;
     line-height: 1.4;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
-/* Donate button */
-
-.donate-button-container {
+/* Buttons/links */
+.donate-button-container, 
+.view-items-link-container {
     flex: 0 0 auto;
     text-align: center;
+    margin: 15px 0;
 }
 
-.donate-button-link {
+.donate-button-link,
+.view-items-link {
     min-height: fit-content;
     display: inline-block;
     background-color: #FFCDB2;
@@ -80,15 +87,19 @@ p {
     font-family: Montserrat, Arial, sans-serif;
 }
 
+.view-items-link {
+    margin: 4px 8px;
+}
+
+/* Divider */
 .line-divider {
     width: 100%;
     height: 1px;
     background-color: #CBC9CF;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 /* Filters */
-
 .filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -108,11 +119,10 @@ p {
     display: inline-block;
     background: none;
     padding: 0;
-    color: white;
+    color: #CBC9CF;
 }
 
 /* Hide the real checkboxes */
-
 .filter-bar input[type="checkbox"] {
     display: none;
 }
@@ -122,10 +132,10 @@ p {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     transition: all 0.2s ease;
+    text-decoration: underline;
 }
 
 /* Checked state */
-
 .filter-bar input[type="checkbox"]:checked+span {
     background: linear-gradient(20deg, #C299A1, #FFB4A2);
     color: #323036;
@@ -133,7 +143,6 @@ p {
 }
 
 /* Items */
-
 .items-container {
     display: flex;
     flex-wrap: wrap;
@@ -144,6 +153,7 @@ p {
 .item-card {
     flex: 1 1 30%;
     max-width: 200px;
+    min-height: 400px;
     border: 1px solid #7B656F;
     border-radius: 12px;
     padding: 12px;
@@ -155,17 +165,17 @@ p {
 
 .item-card img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .item-card h2 {
-    margin: 10px 0 5px;
+    margin: 10px 0;
     color: #323036;
-    text-align: center;
-    font-size: 1.2rem;
+    text-align: left;
+    font-size: 1rem;
 }
 
 .item-details {
@@ -179,19 +189,23 @@ p {
     text-align: left;
     font-size: 0.9rem;
     line-height: 1.4;
+    margin-bottom: 5px;
 }
 
 /* Desktop styles */
-
 @media (min-width: 701px) {
-    .header {
-        margin-bottom: 10px;
-    }
+    /* Global */
     h1 {
         color: #323036;
         font-size: 5rem;
     }
-    /* Intro card */
+
+    /* Header */
+    .header {
+        margin-bottom: 10px;
+    }
+
+    /* Home page */
     .intro-card {
         margin: 20px 0;
     }
@@ -199,18 +213,23 @@ p {
         font-size: 1.2rem;
         line-height: 1.6;
     }
-    /* Donate button */
-    .donate-button-link {
+
+    /* Buttons */
+    .donate-button-link,
+    .view-items-link {
         padding: 12px 20px;
         font-size: 1.5rem;
     }
+    /* Divider */
     .line-divider {
         margin: 20px 0;
     }
+
     /* Filters */
     .filter-bar label {
         font-size: 1rem;
     }
+
     /* Items */
     .items-container {
         display: flex;
@@ -226,7 +245,7 @@ p {
     }
     .item-card h2 {
         margin: 15px 0 10px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .item-details {
         margin-bottom: 15px;
